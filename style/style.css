@@ -1,0 +1,196 @@
+/* ==================== DARK MODE BASE ==================== */
+.dark-body {
+  background: #0e0e0e;
+  color: #e6e6e6;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+.dark-header {
+  text-align: center;
+  padding: 40px 10px;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+.dark-header h1 a {
+  text-decoration: none;
+  font-size: 32px;
+  margin: 0;
+  color: #fff;
+}
+
+.dark-header p {
+  color: #aaa;
+}
+
+/* ==================== LETTER BAR ==================== */
+.letters {
+  text-align: center;
+  padding: 20px;
+}
+
+.letters a {
+  padding: 8px 12px;
+  margin: 4px;
+  background: #1a1a1a;
+  border-radius: 6px;
+  border: 1px solid #333;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  color: #ccc;
+  transition: 0.2s;
+}
+
+.letters a:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ==================== CARD BOX ==================== */
+.card {
+  width: 90%;
+  max-width: 700px;
+  background: #141414;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* ==================== NAME LIST ==================== */
+.name-list {
+  /* Show decimal markers for ordered lists. */
+  list-style: decimal;
+  /* Add some left padding so markers are visible and aligned */
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+.name-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+}
+
+.name-list a {
+  text-decoration: none;
+  color: #4da3ff;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.name-list a:hover {
+  color: #82c3ff;
+}
+
+/* ==================== PAGINATION ==================== */
+.pages {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pages a {
+  padding: 8px 14px;
+  margin: 4px;
+  background: #1a1a1a;
+  border-radius: 6px;
+  border: 1px solid #333;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pages a.active,
+.pages a:hover {
+  background: #4da3ff;
+  color: #000;
+}
+
+/* ==================== FOOTER ==================== */
+
+.dark-footer {
+  text-align: center;
+  padding: 40px 10px;
+  background: #111;
+  border-top: 1px solid #222;
+}
+
+.dark-footer h1 {
+  font-size: 32px;
+  margin: 0;
+  color: #fff;
+}
+.dark-footer p {
+  color: #aaa;
+}
+
+.dark-footer img {
+  margin-top: 15px;
+  width: 150px;
+  opacity: 0.8;
+}
+
+/* ==================== RESULT TABLE ==================== */
+.dark-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dark-table th,
+.dark-table td {
+  padding: 12px;
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+
+.dark-table th {
+  background: #1d1d1d;
+  color: #4da3ff;
+  font-weight: bold;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 600px) {
+  .letters a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  .name-list a {
+    font-size: 16px;
+  }
+}
+
+/* ==================== PURE CSS ANIMATIONS ==================== */
+.fade-in {
+  animation: fade 0.9s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
