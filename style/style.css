@@ -46,6 +46,10 @@
   background: #333;
   color: #fff;
 }
+.letters a.active {
+  background: #4da3ff;
+  color: #000;
+}
 
 /* ==================== CARD BOX ==================== */
 .card {
@@ -67,9 +71,10 @@
 /* ==================== NAME LIST ==================== */
 .name-list {
   /* Show decimal markers for ordered lists. */
-  list-style: decimal;
+  list-style: none;
   /* Add some left padding so markers are visible and aligned */
   padding-left: 1.2em;
+  text-align: left;
   margin: 0;
 }
 
@@ -93,6 +98,15 @@
 .pages {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}
+.pages li{
+  list-style: none;
+  text-decoration: none;
 }
 
 .pages a {

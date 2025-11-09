@@ -10,13 +10,25 @@
   }
   $char = strtoupper($char);
 
-$names = fetch_names_by_initial($char);
+  $perPage= 15;
+  $page = (int)($_GET['page']??1);
+  if($page<1) $page=1;
+
+
+$names = fetch_names_by_initial($char,$page,$perPage);
+$count= count_names_by_initial($char);
+$numPages = (int) ceil($count / $perPage);
 $commonNames = most_common_names();
 
 render('index.view',[
   'char'=>$char,
   'names'=>$names,
-  'commonNames'=>$commonNames
+  'commonNames'=>$commonNames,
+  'pagination'=>[
+    'page'=>$page,
+    'perPage'=>$perPage,
+    'numPages'=>$numPages 
+  ]
 ]);
 
 

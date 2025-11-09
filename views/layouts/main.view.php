@@ -12,7 +12,10 @@
       <p>Explore and find names</p>
     <nav class="letters fade-in">
         <?php foreach($alphabet as $character): ;?>
-        <a href="index.php?<?php echo http_build_query(['char'=> $character]); ?>"><?php echo e($character) ?></a>
+        <a href="index.php?<?php echo http_build_query(['char'=> $character]); ?>" 
+            class="<?php if(!empty($char)&& $char === $character): ?> active <?php endif; ?>">
+          <?php echo e($character) ?>
+        </a>
         <?php endforeach?>
       
      

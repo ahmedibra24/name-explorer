@@ -25,8 +25,27 @@
           <?php endforeach; ?>
         </ol>
 
-        <div class="pages">
-          <a class="active">1</a><a>2</a><a>3</a><a>4</a><a>5</a>
-        </div>
+        
+        <ul class="pages">
+          <?php if($pagination['page']>1): ?>
+            <li>
+              <a href="index.php?<?php echo http_build_query(['char'=> $char , 'page'=> $pagination['page']-1]); ?>">⏴</a>
+            </li>
+          <?php endif; ?>
+          <?php for($x=1;$x<=$pagination['numPages'];$x++): ?>
+            <li>
+              <a href="index.php?<?php echo http_build_query(['char'=> $char , 'page'=> $x]); ?>"
+                 class=" <?php if($pagination['page'] ===$x ) echo 'active'; ?> ">
+                <?php echo e($x); ?>
+              </a>
+            </li>
+          <?php endfor; ?>
+          <?php if($pagination['page']<$pagination['numPages']): ?>
+            <li>
+              <a href="index.php?<?php echo http_build_query(['char'=> $char , 'page'=> $pagination['page']+1]); ?>">⏵</a>
+            </li>
+          <?php endif; ?>
+        </ul>
+        
       </section>
     <?php endif; ?>

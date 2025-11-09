@@ -9,6 +9,7 @@
 
   render('result.view',[
     'name'=>$name,
+    'char'=> $name[0],
     'results'=>$results
   ]);
 
